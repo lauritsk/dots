@@ -1,27 +1,5 @@
-[[plugin.deps]]
-use = "yazi-rs/plugins:mount"
-rev = "75f6f72"
-hash = "e2d4bfccf31e5ab05f46fee4797c5215"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:git"
-rev = "75f6f72"
-hash = "36a484acf6a0a0219c543ccb4cee218f"
-
-[[plugin.deps]]
-use = "yazi-rs/plugins:chmod"
-rev = "75f6f72"
-hash = "8da0b15a97b5dfd13941d1ecc617ac7c"
-
-[[plugin.deps]]
-use = "Lil-Dank/lazygit"
-rev = "0e56060"
-hash = "ab2e66065a94cca4886b303518e44bd8"
-
-[[plugin.deps]]
-use = "TD-Sky/sudo"
-rev = "86205aa"
-hash = "9628b660afb192d32f2ea5f6634d3e72"
+[plugin]
+deps = []
 
 [flavor]
 deps = []
