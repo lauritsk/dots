@@ -33,6 +33,21 @@ X = "select_line_above"
 "C-j" = ["half_page_down", "goto_window_center"]
 "C-k" = ["half_page_up", "goto_window_center"]
 
+C-y = [
+    ':sh rm -f /tmp/unique-file',
+    ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+    ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+    ':open %sh{cat /tmp/unique-file}',
+    ':redraw',
+]
+
+C-s = [
+    ":write-all",
+    ":insert-output scooter --no-stdin > /dev/tty",
+    ":redraw",
+    ":reload-all"
+]
+
 C-g = [
     ":write-all",
     ":new",
@@ -42,10 +57,11 @@ C-g = [
     ":reload-all"
 ]
 
-C-y = [
-    ':sh rm -f /tmp/unique-file',
-    ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
-    ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-    ':open %sh{cat /tmp/unique-file}',
-    ':redraw',
+C-d = [
+    ":write-all",
+    ":new",
+    ":insert-output lazydocker",
+    ":buffer-close!",
+    ":redraw",
+    ":reload-all"
 ]
