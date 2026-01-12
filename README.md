@@ -1,5 +1,6 @@
-# dots
-personal dotfiles
+# Dots
+
+First install [Homebrew](https://brew.sh/)
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --one-shot $GITHUB_USERNAME
