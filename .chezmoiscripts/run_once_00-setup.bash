@@ -49,7 +49,7 @@ else
     echo "✅ Homebrew already installed."
 fi
 
-echo "🌍 Activating Homebrew environment..."
+echo "🌍 Activating Homebrew environment...\n"
 eval "$("$BREW_PREFIX/bin/brew" shellenv)"
 
 if [ -f "$HOME/.Brewfile" ]; then
