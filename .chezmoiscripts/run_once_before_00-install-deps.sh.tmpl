@@ -8,13 +8,13 @@ set -euo pipefail
 {{ else if eq .chezmoi.os "linux" }}
     echo "🐧 Linux detected."
 
-    {{ if eq .chezmoi.osRelease.idLike "debian" }}
-        echo "📦 Installing Debian/Ubuntu dependencies..."
-        sudo apt update -y && sudo apt install -y curl git build-essential
-
-    {{ else if eq .chezmoi.osRelease.id "fedora" }}
+    {{ if eq .chezmoi.osRelease.id "fedora" }}
         echo "📦 Installing Fedora dependencies..."
         sudo dnf update -y && sudo dnf install -y curl git @development-tools
+
+    {{ else if eq .chezmoi.osRelease.idLike "debian" }}
+        echo "📦 Installing Debian/Ubuntu dependencies..."
+        sudo apt update -y && sudo apt install -y curl git build-essential
 
     {{ else if eq .chezmoi.osRelease.idLike "arch" }}
         echo "📦 Installing Arch dependencies..."
