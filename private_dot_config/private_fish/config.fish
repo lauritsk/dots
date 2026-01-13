@@ -1,4 +1,12 @@
 if status is-interactive
+    set -gx fish_greeting
+    set -gx fish_key_bindings fish_vi_key_bindings
+
+    set -gx XDG_CONFIG_HOME $HOME/.config
+    set -gx XDG_CACHE_HOME $HOME/.cache
+    set -gx XDG_DATA_HOME $HOME/.local/share
+    set -gx XDG_STATE_HOME $HOME/.local/state
+
     if test -x /opt/homebrew/bin/brew
         eval (/opt/homebrew/bin/brew shellenv)
     else if test -x /home/linuxbrew/.linuxbrew/bin/brew
