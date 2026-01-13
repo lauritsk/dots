@@ -3,6 +3,7 @@ set -euo pipefail
 
 source "{{ .chezmoi.homeDir }}/.bashrc"
 
+cd {{ .chezmoi.sourceDir }}
 fnox exec -- atuin login --username $ATUIN_USERNAME --password $ATUIN_PASSWORD --key $ATUIN_KEY
 
 echo "✅ Successfully signed into atuin!"
