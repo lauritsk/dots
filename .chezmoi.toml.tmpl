@@ -9,6 +9,9 @@ encryption = "age"
     autoCommit = true
     autoPush = true
 
+[diff]
+    exclude = ["scripts"]
+
 {{ $brewPath := "" }}
 {{- if eq .chezmoi.os "darwin" -}}
     {{- $brewPath = "/opt/homebrew/bin/brew" -}}
