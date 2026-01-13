@@ -27,8 +27,7 @@ elif [ "$OS" = "Linux" ]; then
         elif [[ "$ID" == "fedora" ]]; then
             echo "📦 Installing Fedora dependencies..."
             sudo dnf update -y
-            sudo dnf install -y curl git 
-            sudo dnf group install development-tools
+            sudo dnf install -y curl git @development-tools
         fi
     else
         echo "⚠️  Warning: Unknown Linux distribution. Skipping system deps."
