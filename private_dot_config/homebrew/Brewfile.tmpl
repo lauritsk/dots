@@ -52,7 +52,9 @@ brew "lazyjournal"
 brew "llvm"
 brew "markdown-oxide"
 brew "marksman"
+{{ if eq .chezmoi.os "darwin" -}}
 brew "mas"
+{{- end }}
 brew "mise"
 brew "ripgrep"
 brew "opencode"
