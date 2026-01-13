@@ -8,9 +8,5 @@ pager = "delta"
 diff-formatter = ":git"
 
 [signing]
-sign-all = true
 backend = "ssh"
 key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIERNxt3cnIcfexVELx9Rv/VbP+E64DKVT8iMIYj1e79N"
-
-[signing.backends.ssh]
-program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
