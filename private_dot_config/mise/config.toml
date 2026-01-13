@@ -11,6 +11,3 @@ package_manager = "bun"
 
 [settings.python]
 uv_venv_auto = true
-
-[tools]
-gitleaks = "latest"
