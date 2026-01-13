@@ -12,7 +12,6 @@
         format = ssh
 [gpg "ssh"]
         allowedSignersFile = /Users/karl/.ssh/allowed_signers
-        program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 [tag]
         sort = version:refname
         gpgsign = true
@@ -49,9 +48,3 @@
         renames = true
 [help]
         autocorrect = prompt
-[credential "https://github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/opt/homebrew/bin/gh auth git-credential
