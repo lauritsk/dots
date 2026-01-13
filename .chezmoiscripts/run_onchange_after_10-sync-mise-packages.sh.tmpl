@@ -6,6 +6,6 @@ set -euo pipefail
 echo "🍺 Mise install: Ensuring system matches Mise config..."
 
 echo "📦 Syncing packages (Installing missing, Removing extra)..."
-mise install --yes
+mise install --yes && mise prune --yes
 
 echo "✅ Mise state synced."
