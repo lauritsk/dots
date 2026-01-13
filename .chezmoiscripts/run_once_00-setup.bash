@@ -4,10 +4,6 @@ set -euo pipefail
 OS="$(uname -s)"
 ARCH="$(uname -m)"
 
-exists() {
-  command -v "$1" >/dev/null 2>&1
-}
-
 echo "🚀 Starting system bootstrap for $OS ($ARCH)..."
 
 if [ "$OS" = "Darwin" ]; then
@@ -42,7 +38,7 @@ elif [[ "$OS" == "Linux" ]]; then
     BREW_PREFIX="/home/linuxbrew/.linuxbrew"
 fi
 
-if ! exists "$BREW_PREFIX/bin/brew"; then
+if ! command -v "$BREW_PREFIX/bin/brew"; then
     echo "🍺 Installing Homebrew..."
     NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 else
@@ -58,9 +54,6 @@ if [ -f "$HOME/.Brewfile" ] || [ -f "$HOME/.config/homebrew/Brewfile" ]; then
 else
     echo "⚠️  No Brewfile found. Skipping bundle."
 fi
-
-echo "🚀 Installing Rust with rustup..."
-rustup default stable
 
 # if [ -f "$HOME/.config/mise/config.toml" ]; then
 #     echo "📦  Installing Mise packages..."
