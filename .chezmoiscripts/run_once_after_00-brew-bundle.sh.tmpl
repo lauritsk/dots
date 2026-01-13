@@ -5,7 +5,7 @@ source "$HOME/.bashrc"
 
 if [[ -f "$HOME/.config/homebrew/Brewfile" ]]; then
     echo "📦 Running Homebrew Bundle..."
-    brew bundle --file="$HOME/.config/homebrew/Brewfile"
+    brew bundle --global
 else
     echo "⚠️  No Brewfile found. Skipping bundle."
 fi
