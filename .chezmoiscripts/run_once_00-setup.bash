@@ -19,7 +19,7 @@ elif [ "$OS" = "Linux" ]; then
     if [ -f /etc/os-release ]; then
         . /etc/os-release
         
-        if [[ "$ID_LIKE" == "debian"; then
+        if [[ "$ID_LIKE" == "debian" ]]; then
             echo "📦 Installing Debian/Ubuntu dependencies..."
             sudo apt update -y && sudo apt install -y curl git build-essential
             
