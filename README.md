@@ -4,8 +4,6 @@
 
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --one-shot $GITHUB_USERNAME
-command -v fish | sudo tee -a /etc/shells
-sudo chsh -s "$(command -v fish)" $USER
 fish
 atuin login
 atuin sync # if necessary

@@ -56,4 +56,20 @@ else
     echo "⚠️  No Brewfile found in Home directory. Skipping bundle."
 fi
 
+FISH_BIN="$BREW_PREFIX/bin/fish"
+if [ -x "$FISH_BIN" ]; then
+    echo "🐠 Configuring Fish shell..."
+
+    if ! grep -q "$FISH_BIN" /etc/shells; then
+        echo "Adding $FISH_BIN to /etc/shells..."
+        echo "$FISH_BIN" | sudo tee -a /etc/shells >/dev/null
+    fi
+
+    echo "Changing default shell to Fish..."
+    sudo chsh -s "$FISH_BIN" "$USER"
+
+else
+    echo "⚠️  Fish binary not found at $FISH_BIN. Is it listed in your Brewfile?"
+fi
+
 echo "✅ Setup complete!
