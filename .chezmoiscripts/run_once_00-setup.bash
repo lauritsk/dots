@@ -72,4 +72,4 @@ else
     echo "⚠️  Fish binary not found at $FISH_BIN. Is it listed in your Brewfile?"
 fi
 
-echo "✅ Setup complete!
+echo "✅ Setup complete!"
