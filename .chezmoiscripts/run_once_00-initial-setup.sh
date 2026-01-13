@@ -55,12 +55,12 @@ else
     echo "⚠️  No Brewfile found. Skipping bundle."
 fi
 
-# if [[ -f "$HOME/.config/mise/config.toml" ]]; then
-#     echo "📦  Installing Mise packages..."
-#     mise install
-# else
-#     echo "⚠️  No mise config file found in ~/.config/mise directory. Skipping mise install."
-# fi
+if [[ -f "$HOME/.config/mise/config.toml" ]]; then
+    echo "📦  Installing Mise packages..."
+    mise install
+else
+    echo "⚠️  No mise config file found. Skipping mise install."
+fi
 
 if FISH_PATH="$(command -v fish)"; then
     echo "🐠 Configuring Fish shell..."
