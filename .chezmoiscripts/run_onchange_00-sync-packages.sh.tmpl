@@ -9,3 +9,12 @@ echo "📦 Syncing packages (Installing missing, Removing extra)..."
 brew bundle install --global --cleanup --force
 
 echo "✅ Homebrew state synced."
+
+# {{ include "private_dot_config/mise/config.toml" | sha256sum }}
+
+echo "🍺 Mise install: Ensuring system matches Mise config..."
+
+echo "📦 Syncing packages (Installing missing, Removing extra)..."
+mise install --yes
+
+echo "✅ Mise state synced."
