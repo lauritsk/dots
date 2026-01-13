@@ -1,4 +1,8 @@
 if status is-interactive
+    fish_add_path /opt/homebrew/opt/ruby/bin
+    set -gx LDFLAGS -L/opt/homebrew/opt/ruby/lib
+    set -gx CPPFLAGS -I/opt/homebrew/opt/ruby/include
+    set -gx PKG_CONFIG_PATH /opt/homebrew/opt/ruby/lib/pkgconfig
     zoxide init fish --cmd cd | source
     starship init fish | source
     atuin init fish | source
