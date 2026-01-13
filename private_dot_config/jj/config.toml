@@ -1,11 +1,9 @@
+[ui]
+default-command = "log"
+
 [user]
 name = "Karl Hans Laurits"
 email = "karl@laurits.dev"
-
-[ui]
-default-command = "log"
-pager = "delta"
-diff-formatter = ":git"
 
 [signing]
 backend = "ssh"
