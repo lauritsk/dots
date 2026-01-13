@@ -116,3 +116,5 @@ mas "Web eID", id: 1576665083
 mas "WhatsApp", id: 310633997
 mas "WireGuard", id: 1451685025
 go "github.com/bootdotdev/bootdev"
+cargo "caligula"
+cargo "systemd-lsp"

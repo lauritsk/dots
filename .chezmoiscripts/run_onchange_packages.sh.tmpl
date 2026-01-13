@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+{{ include "private_dot_config/homebrew/Brewfile" | sha256sum }}
+
+echo "🍺 Homebrew Bundle: Ensuring system matches Brewfile..."
+

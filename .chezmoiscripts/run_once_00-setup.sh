@@ -6,13 +6,13 @@ ARCH="$(uname -m)"
 
 echo "🚀 Starting system bootstrap for $OS ($ARCH)..."
 
-if [ "$OS" = "Darwin" ]; then
+if [[ "$OS" = "Darwin" ]]; then
     echo "🍎 macOS detected."
 
-elif [ "$OS" = "Linux" ]; then
+elif [[ "$OS" = "Linux" ]]; then
     echo "🐧 Linux detected."
 
-    if [ -f /etc/os-release ]; then
+    if [[ -f /etc/os-release ]]; then
         . /etc/os-release
 
         if [[ "$ID_LIKE" == "debian" ]]; then
@@ -48,14 +48,14 @@ fi
 echo "🌍 Activating Homebrew environment..."
 eval "$("$BREW_PREFIX/bin/brew" shellenv)"
 
-if [ -f "$HOME/.Brewfile" ] || [ -f "$HOME/.config/homebrew/Brewfile" ]; then
+if [[ -f "$HOME/.config/homebrew/Brewfile" ]]; then
     echo "📦 Running Homebrew Bundle..."
     brew bundle --global
 else
     echo "⚠️  No Brewfile found. Skipping bundle."
 fi
 
-# if [ -f "$HOME/.config/mise/config.toml" ]; then
+# if [[ -f "$HOME/.config/mise/config.toml" ]]; then
 #     echo "📦  Installing Mise packages..."
 #     mise install
 # else
@@ -71,7 +71,7 @@ if FISH_PATH="$(command -v fish)"; then
         echo "$FISH_PATH" | sudo tee -a /etc/shells >/dev/null
     fi
 
-    if [ "$SHELL" != "$FISH_PATH" ]; then
+    if [[ "$SHELL" != "$FISH_PATH" ]]; then
         echo "   Changing default shell to Fish..."
         sudo chsh -s "$FISH_PATH" "$USER"
     else
