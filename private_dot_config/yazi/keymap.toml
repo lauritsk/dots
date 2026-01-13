@@ -5,13 +5,3 @@ on   = "!"
 for  = "unix"
 run  = 'shell "$SHELL" --block'
 desc = "Open $SHELL here"
-
-[[mgr.prepend_keymap]]
-on   = [ "g", "p" ]
-run  = "cd /Users/karl/Documents/Projects"
-desc = "Cd to ~/Documents/Projects"
-
-[[mgr.prepend_keymap]]
-on   = [ "g", "c" ]
-run  = "cd /Users/karl/.config"
-desc = "Cd to ~/.config"
