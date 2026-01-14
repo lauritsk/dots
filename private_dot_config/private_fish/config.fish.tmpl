@@ -9,19 +9,17 @@ if status is-interactive
 
     eval ({{ .brewPath }} shellenv)
 
-    if set -q HOMEBREW_PREFIX
-        if test -d "$HOMEBREW_PREFIX/opt/ruby"
-            fish_add_path "$HOMEBREW_PREFIX/opt/ruby/bin"
-            set -gxp LDFLAGS "-L$HOMEBREW_PREFIX/opt/ruby/lib"
-            set -gxp CPPFLAGS "-I$HOMEBREW_PREFIX/opt/ruby/include"
-            set -gxp PKG_CONFIG_PATH "$HOMEBREW_PREFIX/opt/ruby/lib/pkgconfig"
-        end
+    if test -d "$HOMEBREW_PREFIX/opt/ruby"
+        fish_add_path "$HOMEBREW_PREFIX/opt/ruby/bin"
+        set -gxp LDFLAGS "-L$HOMEBREW_PREFIX/opt/ruby/lib"
+        set -gxp CPPFLAGS "-I$HOMEBREW_PREFIX/opt/ruby/include"
+        set -gxp PKG_CONFIG_PATH "$HOMEBREW_PREFIX/opt/ruby/lib/pkgconfig"
+    end
 
-        if test -d "$HOMEBREW_PREFIX/opt/llvm"
-            fish_add_path "$HOMEBREW_PREFIX/opt/llvm/bin"
-            set -gxp LDFLAGS "-L$HOMEBREW_PREFIX/opt/llvm/lib"
-            set -gxp CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
-        end
+    if test -d "$HOMEBREW_PREFIX/opt/llvm"
+        fish_add_path "$HOMEBREW_PREFIX/opt/llvm/bin"
+        set -gxp LDFLAGS "-L$HOMEBREW_PREFIX/opt/llvm/lib"
+        set -gxp CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
     end
 
     fish_add_path {{ .chezmoi.homeDir }}/.cargo/bin
@@ -30,7 +28,7 @@ if status is-interactive
     set -gx SHELL fish
     set -gx PAGER bat
     set -gx EDITOR hx
-    # set -gx VISUAL "zed --wait"
+    set -gx VISUAL hx
 
     type -q mise; and mise activate fish | source
     type -q zoxide; and zoxide init fish --cmd cd | source
