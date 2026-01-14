@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-source "{{ .chezmoi.homeDir }}/.bashrc"
-
-echo "📦  Installing Mise packages..."
-mise install --yes
-
-echo "✅ Successfully installed mise packages!"

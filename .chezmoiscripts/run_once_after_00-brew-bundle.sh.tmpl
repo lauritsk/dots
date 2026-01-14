@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-source "{{ .chezmoi.homeDir }}/.bashrc"
-
-echo "📦 Running Homebrew Bundle..."
-brew bundle --global
-
-echo "✅ Successfully installed Homebrew packages!"
