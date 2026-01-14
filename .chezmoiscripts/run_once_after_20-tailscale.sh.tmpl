@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source "{{ .chezmoi.homeDir }}/.bashrc"
+
+cd {{ .chezmoi.sourceDir }}
+
+echo "🔓 Logging into Tailscale..."
+fnox exec -- sh -c 'sudo tailscale up \
+  --auth-key "$TS_AUTH_KEY"'
+echo "✅ Successfully signed into Tailscale!"
+
+echo "🔄 Confirming Tailscale status..."
+tailscale status
+
+echo "✅ Tailscale setup complete!"
