@@ -4,9 +4,9 @@ pager = "delta"
 diff-formatter = ":git"
 
 [user]
-name = "Karl Hans Laurits"
-email = "karl@laurits.dev"
+name = "{{ .name }}"
+email = "{{ .email }}"
 
 [signing]
 backend = "ssh"
-key = {{ .sshPublicKey | quote }}
+key = "{{ .sshPublicKey }}"
