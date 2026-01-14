@@ -38,7 +38,3 @@ if status is-interactive
     type -q atuin; and atuin init fish | source
     type -q fnox; and fnox activate fish | source
 end
-
-{{ if eq .chezmoi.os "darwin" -}}
-source ~/.orbstack/shell/init2.fish
-{{- end }}
