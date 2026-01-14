@@ -35,4 +35,16 @@ if status is-interactive
     type -q starship; and starship init fish | source
     type -q atuin; and atuin init fish | source
     type -q fnox; and fnox activate fish | source
+
+    abbr --add a atuin
+    abbr --add cm chezmoi
+    abbr --add d docker
+    abbr --add dc "docker compose"
+    abbr --add lg lazygit
+    abbr --add ld lazydocker
+    abbr --add lj lazyjournal
+    abbr --add oc opencode
+    abbr --add dump "brew bundle dump --global --force"
+    abbr --add la "eza --long --icons --hyperlink --all --group-directories-first --smart-group --git --git-repos"
+    abbr --add lt "eza --long --icons --hyperlink --all --group-directories-first --git-ignore --ignore-glob=.git --smart-group --git --git-repos --tree --level"
 end
