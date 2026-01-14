@@ -1,7 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
-Include {{ .chezmoi.homeDir }}/.orbstack/ssh/config
-{{- end }}
-
 {{ range $name, $server := .servers -}}
 Host {{ $name }}
     HostName {{ $server.host }}
