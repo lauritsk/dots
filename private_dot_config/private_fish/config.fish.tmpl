@@ -1,53 +1,10 @@
 if status is-interactive
     set -gx fish_greeting
     set -gx fish_key_bindings fish_vi_key_bindings
-
-    set -gx XDG_CONFIG_HOME {{ .chezmoi.homeDir }}/.config
-    set -gx XDG_CACHE_HOME {{ .chezmoi.homeDir }}/.cache
-    set -gx XDG_DATA_HOME {{ .chezmoi.homeDir }}/.local/share
-    set -gx XDG_STATE_HOME {{ .chezmoi.homeDir }}/.local/state
-
     eval ({{ .brewPath }}/brew shellenv)
-
-    if test -d "$HOMEBREW_PREFIX/opt/ruby"
-        fish_add_path "$HOMEBREW_PREFIX/opt/ruby/bin"
-        set -gxp LDFLAGS "-L$HOMEBREW_PREFIX/opt/ruby/lib"
-        set -gxp CPPFLAGS "-I$HOMEBREW_PREFIX/opt/ruby/include"
-        set -gxp PKG_CONFIG_PATH "$HOMEBREW_PREFIX/opt/ruby/lib/pkgconfig"
-    end
-
-    if test -d "$HOMEBREW_PREFIX/opt/llvm"
-        fish_add_path "$HOMEBREW_PREFIX/opt/llvm/bin"
-        set -gxp LDFLAGS "-L$HOMEBREW_PREFIX/opt/llvm/lib"
-        set -gxp CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
-    end
-
-    fish_add_path --prepend {{ .chezmoi.homeDir }}/bin
-    fish_add_path {{ .chezmoi.homeDir }}/.cargo/bin
-    fish_add_path {{ .chezmoi.homeDir }}/go/bin
-
-    set -gx SHELL fish
-    set -gx PAGER bat
-    set -gx EDITOR hx
-    set -gx VISUAL hx
-
     type -q mise; and mise activate fish | source
     type -q zoxide; and zoxide init fish --cmd cd | source
     type -q starship; and starship init fish | source
     type -q atuin; and atuin init fish | source
     type -q fnox; and fnox activate fish | source
-
-    abbr --add a atuin
-    abbr --add cm chezmoi
-    abbr --add d docker
-    abbr --add dc "docker compose"
-    abbr --add lg lazygit
-    abbr --add ld lazydocker
-    abbr --add lj lazyjournal
-    abbr --add oc opencode
-    abbr --add ts tailscale
-    abbr --add wgq wg-quick
-    abbr --add dump "brew bundle dump --global --force"
-    abbr --add la "eza --long --icons --hyperlink --all --group-directories-first --smart-group --git --git-repos"
-    abbr --add lt "eza --long --icons --hyperlink --all --group-directories-first --git-ignore --ignore-glob=.git --smart-group --git --git-repos --tree --level"
 end

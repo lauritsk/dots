@@ -24,7 +24,7 @@ source "{{ .chezmoi.homeDir }}/.bashrc"
 
 echo "🔓 Attempting to log into Atuin..."
 
-if fnox exec -- sh -c 'atuin login \
+if mise exec -- sh -c 'atuin login \
   --username "$ATUIN_USERNAME" \
   --password "$ATUIN_PASSWORD" \
   --key "$ATUIN_KEY"'; then

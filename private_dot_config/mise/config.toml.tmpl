@@ -10,3 +10,37 @@ package_manager = "bun"
 
 [settings.python]
 uv_venv_auto = true
+
+[shell_alias]
+a = "atuin"
+cm = "chezmoi"
+d = "docker"
+dc = "docker compose"
+lg = "lazygit"
+ld = "lazydocker"
+lj = "lazyjournal"
+oc = "opencode"
+ts = "tailscale"
+wgq = "wg-quick"
+dump = "brew bundle dump --global --force"
+la = "eza --long --icons --hyperlink --all --group-directories-first --smart-group --git --git-repos"
+lt = "eza --long --icons --hyperlink --all --group-directories-first --git-ignore --ignore-glob=.git --smart-group --git --git-repos --tree --level"
+
+[env]
+_.path = [
+    "{{ .chezmoi.homeDir }}/bin",
+    "{{ .chezmoi.homeDir }}/.cargo/bin",
+    "{{ .chezmoi.homeDir }}/go/bin",
+    "$HOMEBREW_PREFIX/opt/ruby/bin",
+    "$HOMEBREW_PREFIX/opt/llvm/bin"
+]
+SHELL = "fish"
+PAGER = "bat"
+EDITOR = "hx"
+VISUAL = "hx"
+XDG_CONFIG_HOME = "{{ .chezmoi.homeDir }}/.config"
+XDG_CACHE_HOME = "{{ .chezmoi.homeDir }}/.cache"
+XDG_DATA_HOME = "{{ .chezmoi.homeDir }}/.local/share"
+XDG_STATE_HOME = "{{ .chezmoi.homeDir }}/.local/state"
+MISE_GITHUB_TOKEN = { age = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBhblByQWUyQzdhalRYSVVBclcreEowS1VhbjdUbHIvNUN4Q2liZnhiSmhVClM4ZGZXQm1aWkFIRlRwQUZ6N2NBaDl5RXVSZndvdDM1cmV4VmQ3Y0Jubm8KLT4gc3NoLWVkMjU1MTkgaytYQ0RnIGNDTnRMMm9scnphSjZEbktqellBOWhvOGZpUVBRTS9BQTRTZy9JYnZEbHMKNVNiMTQ0ZndjSUdXRWh5dGFSK003dTZTZUNibnJZcUJGa2cxZUhtWDJ4VQotPiB3WW4+LWdyZWFzZSAqIjZWRWNdIHI+VTxDSSxoCjRNWFRwMGtJcWpIVVJlTk5NeHE5VDZMMUhkcHhiVWJXU3gwczRPQTA3WUV0WUlpd011S253cHZGZDYzalQxTmsKSUdueGZnCi0tLSAyWXVqNktxWll2RVJiTkJFemg3bzMxbVBsS1BuNG8rVWM0Vk43MUpNaUxjCn9flMcm8Rxd3E7gJtxbfwTxS7In2SwcLPhbK3WDVG0xFkgc8jYBsz2b78YyQIk7N96JkXQLm61WuY38aysrSqWFZdLxGv5KYA" }
+GITHUB_TOKEN = { age = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBMYWVNMEw5Y1cxQVEybnBrakx6SElqRnhMenU5M2pGYVZJRUtvcEJIYzBBCmtnWkp0azhwTUJVRHl1cmR5Qks2cmNudHVoZTlQWlFETjJFeGFLaDN4Q00KLT4gc3NoLWVkMjU1MTkgaytYQ0RnIGJPUmRET3JSL0oySy9qYVk4VnpFelNXTld4R0g5U2hDbTNGUkJVZFJ0UWcKeERoa2xqM1hieGdmNEkxNC9wazdlZEduS0IxdDhlenhXTFpoVE94cUVKZwotPiB9UTd2aC1ncmVhc2UgQUtpeW8KQ1lyYlEzeWZ2VDVNUFQ3aGtFMFB2TU8rcy9XRU9TUWZBWC9DcFNNQ3BRCi0tLSA5OUZQWmZ2eXVFSFNOd09XR3VxWi9XSWpQc3F4VEdXMzhlMEt4NEczcU9nCgHiXyi+54dJqkYUbwr5/uI8Nt0TB302ggGQCmC8eSH4SXXLsxyNhHc63Pal7n9nz73OyrT2YCOYI231oyX+l25zuDTQN5eN7g" }

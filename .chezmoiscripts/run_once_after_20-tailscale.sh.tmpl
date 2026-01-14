@@ -4,7 +4,7 @@ set -euo pipefail
 source "{{ .chezmoi.homeDir }}/.bashrc"
 
 echo "🔓 Logging into Tailscale..."
-fnox exec -- sh -c 'sudo tailscale up \
+mise exec -- sh -c 'sudo tailscale up \
   --auth-key "$TS_AUTH_KEY"'
 echo "✅ Successfully signed into Tailscale!"
 
