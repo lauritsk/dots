@@ -30,7 +30,7 @@ fi
 
 if ! command -v mise >/dev/null 2>&1; then
     echo "mise Installing mise..."
-    {{ .brewPath }}/brew install mise
+    {{ .brewPath }}/brew install node uv go rust age mise
 fi
 
 echo "✅ Initial setup complete!"
