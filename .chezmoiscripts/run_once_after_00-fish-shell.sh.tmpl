@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-echo "qh Configuring shell..."
+eval "$({{ .brewPath }}/brew shellenv)"
+
+echo "🐠 Configuring shell..."
 mise run setup:shell
