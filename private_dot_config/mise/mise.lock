@@ -146,9 +146,9 @@ backend = "aqua:helix-editor/helix"
 "platforms.macos-arm64" = { checksum = "sha256:00b1651b4fdbbe0a2ae981c8e76b858bd26a7c33f5b3583f3b6bb9137d54f1ff", url = "https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-aarch64-macos.tar.xz"}
 
 [[tools.helm]]
-version = "4.0.4"
+version = "4.0.5"
 backend = "aqua:helm/helm"
-"platforms.macos-arm64" = { checksum = "sha256:a7ea99937a9679b3935fa0a2b70e577aa1ea84e5856e7c0821ca6ffa064ea976", url = "https://get.helm.sh/helm-v4.0.4-darwin-arm64.tar.gz"}
+"platforms.macos-arm64" = { checksum = "sha256:b4d04ccf68004604e13878fce4a893711490914512f8759879f848136a9f5fca", url = "https://get.helm.sh/helm-v4.0.5-darwin-arm64.tar.gz"}
 
 [[tools.helm-ls]]
 version = "0.5.4"
@@ -199,14 +199,19 @@ version = "2025-12-13"
 backend = "aqua:artempyanykh/marksman"
 "platforms.macos-arm64" = { checksum = "sha256:ec949f430c18679057983bcd8a24f95550edea2a855fc040b307da67c78f0989", url = "https://github.com/artempyanykh/marksman/releases/download/2025-12-13/marksman-macos"}
 
+[[tools.oha]]
+version = "1.12.1"
+backend = "aqua:hatoo/oha"
+"platforms.macos-arm64" = { checksum = "sha256:4380a6111bf31d80faa6c745bfbc57088357a5a44274c7e3ec95c4451dd67555", url = "https://github.com/hatoo/oha/releases/download/v1.12.1/oha-macos-amd64"}
+
 [[tools.op]]
 version = "2.32.0"
 backend = "vfox:op"
 
 [[tools.opencode]]
-version = "1.1.20"
+version = "1.1.21"
 backend = "aqua:anomalyco/opencode"
-"platforms.macos-arm64" = { checksum = "sha256:778a10465683ef705006c68e469b7d94c52efd400a768aeb2d35e2f1f6a8f1f6", url = "https://github.com/anomalyco/opencode/releases/download/v1.1.20/opencode-darwin-arm64.zip"}
+"platforms.macos-arm64" = { checksum = "sha256:23d6384be99473aee013a0f1a1a6df20af79da0095c30c136b7748120a24129e", url = "https://github.com/anomalyco/opencode/releases/download/v1.1.21/opencode-darwin-arm64.zip"}
 
 [[tools.opentofu]]
 version = "1.11.3"
