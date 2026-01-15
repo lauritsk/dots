@@ -19,6 +19,7 @@ brew "gnupg"
 brew "gopls"
 brew "imagemagick"
 brew "jdtls"
+brew "lima"
 brew "qemu"
 brew "lima-additional-guestagents"
 brew "llvm"
@@ -26,6 +27,7 @@ brew "markdown-oxide"
 {{ if eq .chezmoi.os "darwin" -}}
 brew "mas"
 {{- end }}
+brew "usage"
 brew "mise"
 brew "openssh"
 brew "php"
@@ -67,6 +69,8 @@ mas "Reeder", id: 6475002485
 mas "Web eID", id: 1576665083
 mas "WhatsApp", id: 310633997
 go "github.com/bootdotdev/bootdev"
+go "cmd/go"
+go "cmd/gofmt"
 cargo "caligula"
 cargo "commit-lsp"
 cargo "systemd-lsp"
