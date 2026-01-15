@@ -64,6 +64,11 @@ version = "29.1.4"
 backend = "aqua:docker/cli"
 "platforms.macos-arm64" = { checksum = "blake3:e40c4e36a4512ff839b5b4f911a7a2a160a23085699a55f2747d8845dc81fb62", url = "https://download.docker.com/mac/static/stable/aarch64/docker-29.1.4.tgz"}
 
+[[tools.docker-compose]]
+version = "5.0.1"
+backend = "aqua:docker/compose"
+"platforms.macos-arm64" = { checksum = "sha256:74ddfae9ca673e11babe45b0945fe825c0fb1f16e56f9772b4ee7a2a9d00bf19", url = "https://github.com/docker/compose/releases/download/v5.0.1/docker-compose-darwin-aarch64"}
+
 [[tools.doggo]]
 version = "1.1.4"
 backend = "aqua:mr-karan/doggo"
