@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-source "{{ .chezmoi.homeDir }}/.bashrc"
-
 FISH_PATH="$(command -v fish)"
 
 if ! grep -q "$FISH_PATH" /etc/shells; then
