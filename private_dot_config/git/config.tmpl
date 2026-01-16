@@ -5,17 +5,9 @@
         email = {{ .email }}
         signingkey = {{ .sshPublicKey }}
 [core]
-        pager = delta
         fsmonitor = true
         untrackedCache = true
         excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
-[interactive]
-        diffFilter = delta --color-only
-[delta]
-        hyperlinks = true
-        navigate = true
-        side-by-side = false
-        syntax-theme = Catppuccin Mocha
 [gpg]
         format = ssh
 [gpg "ssh"]

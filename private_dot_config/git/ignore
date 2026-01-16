@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "linux" }}
 ### Linux ###
 *~
 
@@ -13,7 +12,7 @@
 
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
-{{ else if eq .chezmoi.os "darwin" }}
+
 ### macOS ###
 # General
 .DS_Store
@@ -44,7 +43,7 @@ Temporary Items
 
 # iCloud generated files
 *.icloud
-{{ else if eq .chezmoi.os "windows" }}
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -70,4 +69,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-{{ end }}
