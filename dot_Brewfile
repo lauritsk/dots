@@ -1,6 +1,7 @@
 brew "atuin", restart_service: :changed
 brew "chezmoi"
 brew "fish"
+brew "fzf"
 brew "gh"
 brew "mas"
 brew "usage"
