@@ -1,8 +1,12 @@
+brew "atuin", restart_service: :changed
 brew "chezmoi"
+brew "fish"
 brew "gh"
 brew "mas"
 brew "usage"
 brew "mise"
+brew "starship"
+brew "zoxide"
 cask "1password"
 cask "affinity"
 cask "font-monaspace"
