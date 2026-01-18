@@ -15,4 +15,5 @@ ld = "lazydocker"
 dc = "docker compose"
 
 [tools]
+chezmoi = "latest"
 starship = "latest"
