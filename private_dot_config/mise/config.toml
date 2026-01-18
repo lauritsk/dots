@@ -15,5 +15,9 @@ ld = "lazydocker"
 dc = "docker compose"
 
 [tools]
+atuin = "latest"
 chezmoi = "latest"
+fzf = "latest"
+helix = "latest"
 starship = "latest"
+zoxide = "latest"
