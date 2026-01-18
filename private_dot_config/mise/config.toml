@@ -13,3 +13,6 @@ y = "yazi"
 lg = "lazygit"
 ld = "lazydocker"
 dc = "docker compose"
+
+[tools]
+starship = "latest"
