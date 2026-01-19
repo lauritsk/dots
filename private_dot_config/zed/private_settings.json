@@ -102,9 +102,7 @@
     "show_branch_icon": true,
   },
   "terminal": {
-    "shell": {
-      "program": "/opt/homebrew/bin/fish"
-    },
+    "shell": "system",
     "toolbar": {
       "breadcrumbs": true,
     },
