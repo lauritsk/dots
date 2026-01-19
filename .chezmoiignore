@@ -12,7 +12,7 @@ key.txt.age
 .config/gh
 .config/helix
 .config/mise
-.config/private_atuin
-.config/private_fish
+.config/atuin
+.config/fish
 .config/yazi
 {{ end }}
