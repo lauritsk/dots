@@ -1,5 +1,6 @@
 README.md
 key.txt.age
+install.sh
 
 {{ if ne .chezmoi.os "darwin" }}
 .Brewfile
