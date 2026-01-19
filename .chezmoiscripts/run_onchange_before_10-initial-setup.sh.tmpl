@@ -21,55 +21,19 @@ else
     echo "✅ Mise already installed."
 fi
 
-{{ if eq .chezmoi.osRelease.id "fedora" }}
 
 if ! command -v git > /dev/null 2>&1; then
-    echo "📦 Installing git..."
-    sudo dnf -y install git
+    echo "📦 Installing essential packages..."
+    {{ if (or (eq .chezmoi.osRelease.id "debian") (eq .chezmoi.osRelease.id "ubuntu")) }}
+    sudo apt -y install git fish
+    {{ else if eq .chezmoi.osRelease.id "fedora" }}
+    sudo dnf -y install git fish
+    {{ else if eq .chezmoi.osRelease.idLike "arch" }}
+    sudo pacman -S --noconfirm git fish
+    {{ end }}
 else
-    echo "✅ Git already installed."
+    echo "✅ Essential packages already installed."
 fi
-
-if ! command -v fish > /dev/null 2>&1; then
-    echo "📦 Installing Fish..."
-    sudo dnf -y install fish
-else
-    echo "✅ Fish already installed."
-fi
-
-{{ else if eq .chezmoi.osRelease.idLike "debian" }}
-
-if ! command -v git > /dev/null 2>&1; then
-    echo "📦 Installing git..."
-    sudo apt -y install git
-else
-    echo "✅ Git already installed."
-fi
-
-if ! command -v fish > /dev/null 2>&1; then
-    echo "📦 Installing Fish..."
-    sudo apt -y install fish
-else
-    echo "✅ Fish already installed."
-fi
-
-{{ else if eq .chezmoi.osRelease.idLike "arch" }}
-
-if ! command -v git > /dev/null 2>&1; then
-    echo "📦 Installing git..."
-    sudo pacman -S --noconfirm git
-else
-    echo "✅ Git already installed."
-fi
-
-if ! command -v fish > /dev/null 2>&1; then
-    echo "📦 Installing Fish..."
-    sudo pacman -S --noconfirm fish && sudo chsh -s $(which fish) $USER
-else
-    echo "✅ Fish already installed."
-fi
-
-{{ end }}
 
 if [ "$SHELL" != "$(command -v fish)" ]; then
     echo "🔄 Setting Fish as the default shell..."
