@@ -8,10 +8,14 @@ MISE_AGE_KEY = { age = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSOW8rM3RwSjhs
 GITHUB_TOKEN = { age = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBMYWVNMEw5Y1cxQVEybnBrakx6SElqRnhMenU5M2pGYVZJRUtvcEJIYzBBCmtnWkp0azhwTUJVRHl1cmR5Qks2cmNudHVoZTlQWlFETjJFeGFLaDN4Q00KLT4gc3NoLWVkMjU1MTkgaytYQ0RnIGJPUmRET3JSL0oySy9qYVk4VnpFelNXTld4R0g5U2hDbTNGUkJVZFJ0UWcKeERoa2xqM1hieGdmNEkxNC9wazdlZEduS0IxdDhlenhXTFpoVE94cUVKZwotPiB9UTd2aC1ncmVhc2UgQUtpeW8KQ1lyYlEzeWZ2VDVNUFQ3aGtFMFB2TU8rcy9XRU9TUWZBWC9DcFNNQ3BRCi0tLSA5OUZQWmZ2eXVFSFNOd09XR3VxWi9XSWpQc3F4VEdXMzhlMEt4NEczcU9nCgHiXyi+54dJqkYUbwr5/uI8Nt0TB302ggGQCmC8eSH4SXXLsxyNhHc63Pal7n9nz73OyrT2YCOYI231oyX+l25zuDTQN5eN7g" }
 
 [shell_alias]
+g = "git"
+a = "atuin"
 cm = "chezmoi"
 y = "yazi"
 lg = "lazygit"
 ld = "lazydocker"
+oc = "opencode"
+d = "docker"
 dc = "docker compose"
 
 [tools]
