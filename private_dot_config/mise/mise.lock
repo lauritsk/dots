@@ -6,6 +6,10 @@ backend = "aqua:atuinsh/atuin"
 version = "2.69.3"
 backend = "aqua:twpayne/chezmoi"
 
+[[tools.fd]]
+version = "10.3.0"
+backend = "aqua:sharkdp/fd"
+
 [[tools.fzf]]
 version = "0.67.0"
 backend = "aqua:junegunn/fzf"
@@ -18,9 +22,21 @@ backend = "aqua:helix-editor/helix"
 version = "0.37.0"
 backend = "aqua:jj-vcs/jj"
 
+[[tools.jq]]
+version = "1.8.1"
+backend = "aqua:jqlang/jq"
+
 [[tools.lazygit]]
 version = "0.58.1"
 backend = "aqua:jesseduffield/lazygit"
+
+[[tools.opencode]]
+version = "1.1.25"
+backend = "aqua:anomalyco/opencode"
+
+[[tools.ripgrep]]
+version = "15.1.0"
+backend = "aqua:BurntSushi/ripgrep"
 
 [[tools.starship]]
 version = "1.24.2"
