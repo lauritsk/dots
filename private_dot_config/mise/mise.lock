@@ -14,9 +14,17 @@ backend = "aqua:junegunn/fzf"
 version = "25.07.1"
 backend = "aqua:helix-editor/helix"
 
+[[tools.lazygit]]
+version = "0.58.1"
+backend = "aqua:jesseduffield/lazygit"
+
 [[tools.starship]]
 version = "1.24.2"
 backend = "aqua:starship/starship"
+
+[[tools.yazi]]
+version = "26.1.4"
+backend = "aqua:sxyazi/yazi"
 
 [[tools.zoxide]]
 version = "0.9.8"
