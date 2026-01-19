@@ -8,7 +8,13 @@
   },
   "buffer_line_height": "comfortable",
   "ui_font_family": "Monaspace Neon",
-  "ssh_connections": [],
+  "ssh_connections": [
+    {
+      "host": "orb",
+      "args": [],
+      "projects": []
+    }
+  ],
   "centered_layout": {
     "right_padding": null,
     "left_padding": null
