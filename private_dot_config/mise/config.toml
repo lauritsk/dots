@@ -11,6 +11,7 @@ GITHUB_TOKEN = { age = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBMYWVNMEw5Y1cx
 g = "git"
 a = "atuin"
 cm = "chezmoi"
+pf = "pitchfork"
 y = "yazi"
 lg = "lazygit"
 ld = "lazydocker"
