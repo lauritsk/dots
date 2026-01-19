@@ -11,6 +11,7 @@ key.txt.age
 {{ if ne .chezmoi.os "linux" }}
 .config/gh
 .config/helix
+.config/jj
 .config/mise
 .config/atuin
 .config/fish
